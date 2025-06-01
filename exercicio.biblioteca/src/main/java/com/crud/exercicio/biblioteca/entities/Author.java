@@ -3,8 +3,11 @@ package com.crud.exercicio.biblioteca.entities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+
+import java.util.List;
 
 @Entity
 @Table(name = "authors")
@@ -15,6 +18,9 @@ public class Author {
   private Long id;
   private String name;
   private String nationality;
+
+  @ManyToMany(mappedBy = "authors")
+  private List<Book> books;
 
   public Author() {
   }

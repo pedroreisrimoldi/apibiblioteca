@@ -3,6 +3,8 @@ package com.crud.exercicio.biblioteca.entities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -17,6 +19,10 @@ public class BookDetail {
   private Integer pageCount;
   private String year;
   private String isbn;
+
+  @OneToOne(optional = false)
+  @JoinColumn(name = "book_id")
+  private Book book;
 
   public BookDetail() {
   }
