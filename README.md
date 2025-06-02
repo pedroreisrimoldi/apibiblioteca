@@ -27,5 +27,6 @@ todas as configurações estão presentes, apenas construir imagem do docker-com
 docker-compose up --build
 
 5. Rodar comando bash na raiz do projeto
+mvn install
 mvn spring-boot:run
 A aplicação estará disponível em http://localhost:8080.
