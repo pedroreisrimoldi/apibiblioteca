@@ -73,4 +73,12 @@ public class BookDetail {
   public void setIsbn(String isbn) {
     this.isbn = isbn;
   }
+
+  public Book getBook() {
+    return book;
+  }
+
+  public void setBook(Book book) {
+    this.book = book;
+  }
 }
